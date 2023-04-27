@@ -26,7 +26,10 @@ def resetpush():
 
 
 def timerstart():
-    count_D(int(LONG.get()))
+    if type(LONG.get())==str:
+        count_D(60)
+    else:
+        count_D(int(LONG.get()))
 
 
 
