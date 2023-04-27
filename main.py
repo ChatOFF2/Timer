@@ -8,7 +8,7 @@ GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
 WORK_MIN = 25
-LONG = 61
+LONG=None
 SHORT = 5
 LONG_BREAK_MIN = 20
 ochered=[7,5,7,5]
@@ -26,7 +26,7 @@ def resetpush():
 
 
 def timerstart():
-    count_D(LONG)
+    count_D(int(LONG.get()))
 
 
 
@@ -73,6 +73,8 @@ labalTIMER.grid(row=0,column=1)
 checkboxLABEL=tkinter.Label(text="",background=YELLOW)
 checkboxLABEL.grid(column=1,row=2)
 
+LONG = tkinter.Entry(master=window)
+LONG.grid(row=5,column=1,pady=10)
 
 
 
